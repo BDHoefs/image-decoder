@@ -247,7 +247,7 @@ impl<'data> JPEGDecoder<'data> {
             let horiz_ratio =
                 header.mcu_info.max_xy_sampling_factor.0 / component.frame.xy_sampling_factor.0;
             let vert_ratio =
-                header.mcu_info.max_xy_sampling_factor.0 / component.frame.xy_sampling_factor.0;
+                header.mcu_info.max_xy_sampling_factor.1 / component.frame.xy_sampling_factor.1;
 
             if horiz_ratio > 1 || vert_ratio > 1 {
                 let mut stretched_block = component_block.clone();
